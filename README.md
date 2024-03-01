@@ -1,4 +1,4 @@
-# Symfony 6 login
+# Symfony 6 email
 
 <img src="https://jorgebenitezlopez.com/github/symfony.jpg">
 <img src="https://img.shields.io/static/v1?label=PHP&message=Symfony&color=green">
@@ -12,18 +12,14 @@
 
 # Instalación de Symfony y paquetes
 
-- symfony new symfony-6-login --version=6.4
-- cd back
-- composer require symfony/maker-bundle --dev  (Comandos para construir)
-- composer require symfony/orm-pack (ORM para pegar la base de datos)
-- composer require symfony/profiler-pack --dev (Profiler para tener información)
-- composer require form (Para los formularios) 
-- composer require validator (Validaciones)
-- composer require twig-bundle (Para plantillas) 
-- composer require security-csrf
-- composer require api
-- composer require api symfony/security-bundle
-- composer require lexik/jwt-authentication-bundle (Para seguridad. Si falla en Windows en el php.ini permitir la extension sodium. También puede ser necesaria la extensión composer requiere ext-openssl) 
+- symfony new symfony-6-email --version=6.4
+- cd symfony-6-email
+- composer require symfony/mailer
+- composer require symfony/maker-bundle --dev
+- Hago controlador php bin/console make:controller email
+- Añador en el .env el email
+- Creo el servicio
+- Lo importo en el controlador y uso el servicio para enviar un email.
 
 # Pasos para el CRUD de users
 
